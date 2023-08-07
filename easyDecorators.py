@@ -21,25 +21,29 @@ return a function.***
 # inner_value=outer_fun(1)
 # print(inner_value())
 
-def decoratorFunc(additionFunc):
-    def innerFunc():
-        additionValue=additionFunc()+float(input("Enter third number: "))
-        return additionValue
-    return innerFunc
-def addition():
-    return  float(input("Enter the first number: "))+float(input("Enter the first number: "))
-innerFunc=decoratorFunc(addition)
-finalValue=innerFunc()
-print(finalValue)
+# def decoratorFunc(additionFunc):
+#     def innerFunc():
+#         additionValue=additionFunc()+float(input("Enter third number: "))
+#         return additionValue
+#     return innerFunc
+# def addition():
+#     return  float(input("Enter the first number: "))+float(input("Enter the first number: "))
+# innerFunc=decoratorFunc(addition)
+# finalValue=innerFunc()
+# print(finalValue)
 
 
-# def addValue(x,y):
-#     return x+y
-# def calculate(func):
-#     def increasing():
-#         prevValue=func()
-#         return prevValue+1
-#     return increasing
-# value=calculate(addValue(4,4))
-# print(value)
+def addValue(x,y):
+    return x+y
+def calculate(func):
+    def increasing():
+      prevValue=func(float(input("Enter x value: ")),float(input("Enter Y value: ")))
+      return prevValue+float(input("Enter Z value: "))
+    return increasing
+# increasingFunc=calculate(addValue)
+# totalValue=increasingFunc()
+# print(totalValue)
+totalValue=calculate(addValue)()
+print(totalValue)
+
 
