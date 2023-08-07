@@ -40,10 +40,10 @@ def calculate(func):
       prevValue=func(float(input("Enter x value: ")),float(input("Enter Y value: ")))
       return prevValue+float(input("Enter Z value: "))
     return increasing
-# increasingFunc=calculate(addValue)
-# totalValue=increasingFunc()
-# print(totalValue)
-totalValue=calculate(addValue)()
+increasingFunc=calculate(addValue)
+totalValue=increasingFunc()
 print(totalValue)
+# totalValue=calculate(addValue)()
+# print(totalValue)
 
 
